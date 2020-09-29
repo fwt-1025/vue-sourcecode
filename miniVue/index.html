@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">{{name}}</div>
+    <script src="./miniVue.js"></script>
+    <script>
+        const vm = new MiniVue({
+            el: '#app',
+            data: {
+                name: '123',
+                age: 12,
+                study: {
+                    name: '333',
+                    age: 444
+                }
+            }
+        })
+        console.log(vm)
+        vm.$options.data.name = '你好啊'
+        vm.$options.data.age = '22'
+        localStorage.setItem('info', true)
+        console.log(JSON.parse(localStorage.getItem('info')))
+    </script>
+</body>
+</html>
