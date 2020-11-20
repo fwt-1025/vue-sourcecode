@@ -94,7 +94,7 @@
      function vuexInit () {
        const options = this.$options // 获取vue的options new Vue({options})
        // store injection
-       if (options.store) { // 如果你在options中写入了store， 这里也就决定了vuex只能起名叫store， 不然就没法用this.$store； 同时这里也将options.store赋值给了this.$store, 所以我们可以在组件中使用this.$store取值， 提交，等操作。
+       if (options.store) { // 如果你在options中要用vuex，属性名只能起名叫store， 不然就没法用this.$store； 同时这里也将options.store赋值给了this.$store, 所以我们可以在组件中使用this.$store取值， 提交，等操作。
          this.$store = typeof options.store === 'function'
            ? options.store()
            : options.store
@@ -117,9 +117,9 @@
    3. 要在new Vue({ store }) ;里面一定要写store , 否则this.$state不会执行；
 
       ```js
-      import store from './store'
+      import vuexstore from './store'
       new Vue({
-          store // 这里一定要是store哦
+          store: vuexstore // 这里一定要是store哦, 这里这样写就是为了让大家知道属性值必须是store
       }).$mount('#app')
       ```
 
