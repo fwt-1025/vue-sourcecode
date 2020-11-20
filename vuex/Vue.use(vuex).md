@@ -94,7 +94,7 @@
      function vuexInit () {
        const options = this.$options // 获取vue的options new Vue({options})
        // store injection
-       if (options.store) { // 如果你在options中要用vuex，属性名只能起名叫store， 不然就没法用this.$store； 同时这里也将options.store赋值给了this.$store, 所以我们可以在组件中使用this.$store取值， 提交，等操作。
+       if (options.store) { // 如果你要用vuex，options中属性名只能起名叫store， 不然就没法用this.$store； 同时这里也将options.store赋值给了this.$store, 所以我们可以在组件中使用this.$store取值， 提交，等操作。
          this.$store = typeof options.store === 'function'
            ? options.store()
            : options.store
