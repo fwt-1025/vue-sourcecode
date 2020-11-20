@@ -24,7 +24,9 @@
    }
    ```
 
-   `Vue.use` 看一下Vue源码中的use方法。
+   引入vuex，vuex上就暴露出install， Store等方法，因为在使用Vue.use()插件时, 
+   如果插件有install方法就会执行插件的install方法，
+   接下来我们看一下`Vue.use` Vue源码中的use方法。
 
    ```js
    // src/core/global-api/use.js （Vue源码）
@@ -48,7 +50,7 @@
      }
    ```
 
-   然后看install 方法干了啥？
+   然后看vuex 的 install 方法干了啥？
 
    ```js
    // src/store.js（Vuex 源码）
