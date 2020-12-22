@@ -9,7 +9,7 @@
     <div id="app">{{name}}</div>
     <script src="./miniVue.js"></script>
     <script>
-        const vm = new MiniVue({
+        const vm = new Vue({
             el: '#app',
             data: {
                 name: '123',
@@ -20,11 +20,7 @@
                 }
             }
         })
-        console.log(vm)
-        vm.$options.data.name = '你好啊'
-        vm.$options.data.age = '22'
-        localStorage.setItem('info', true)
-        console.log(JSON.parse(localStorage.getItem('info')))
+        console.log(vm.name, vm.age)
     </script>
 </body>
 </html>
