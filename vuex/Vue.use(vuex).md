@@ -92,7 +92,7 @@
      /**
       * Vuex init hook, injected into each instances init hooks list.
       */
-   	// 初始化vuex， 将vuex注入到Vue根实例以及各个组件实例中
+   	// 将vuex注入到Vue根实例以及各个组件实例中
      function vuexInit () {
        const options = this.$options // 获取vue的options new Vue({options})
        // store injection
