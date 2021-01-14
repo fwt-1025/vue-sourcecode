@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue</title>
+</head>
+<body>
+    Welcome to Vue
+    <div id="app"></div>
+    <script src="./依赖收集.js"></script>
+    <script>
+        const vm = new Vue({
+            data: {
+                name: 'myVue',
+                age: 5
+            }
+        })
+        vm.$mount('#app')
+        vm.$watch('name', function (p, n) {
+            console.log(p, n)
+        })
+        // vm.$watch('age', function (p, n) {
+        //     console.log(p, n)
+        // })
+        // vm.$watch('name', function (p, n) {
+        //     console.log(p, n)
+        // })
+    </script>
+</body>
+</html>
